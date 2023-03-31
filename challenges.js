@@ -59,9 +59,14 @@ addTwoNumbers('Hello', 5) //=> NaN
 -----------------------------------------------------------------*/
 // Your solution for 02-addTwoNumbers here:
 
+function addTwoNumbers(num1, num2) {
+    return num1 + num2
+}
 
-
-
+console.log(addTwoNumbers(5, 10)) //=> 15
+console.log(addTwoNumbers(10, -2)) //=> 8
+console.log(addTwoNumbers(0, 0)) //=> 0
+console.log(addTwoNumbers('Hello', 5)) //=> NaN
 
 /*-----------------------------------------------------------------
 Challenge: 03-sumNumbers
