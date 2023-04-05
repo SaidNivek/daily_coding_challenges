@@ -90,10 +90,10 @@ function sumNumbers(arr) {
     })
     return sum
 }
-console.log(sumNumbers([10])) //=> 10
-console.log(sumNumbers([5, 10])) //=> 15
-console.log(sumNumbers([2, 10, -5])) //=> 7
-console.log(sumNumbers([])) //=> 0
+// console.log(sumNumbers([10])) //=> 10
+// console.log(sumNumbers([5, 10])) //=> 15
+// console.log(sumNumbers([2, 10, -5])) //=> 7
+// console.log(sumNumbers([])) //=> 0
 
 
 /*-----------------------------------------------------------------
@@ -115,7 +115,17 @@ add(7,-12) //=> -5
 -----------------------------------------------------------------*/
 // Your solution for 04-addList here:
 
+function addList(...args) {
+    let sum = 0
+    args.forEach(num => {
+        sum += num
+    })
+    return sum
+}
 
+console.log(addList(1)) //=> 1
+console.log(addList(1,50,1.23)) //=> 52.23
+console.log(addList(7,-12)) //=> -5
 
 
 
