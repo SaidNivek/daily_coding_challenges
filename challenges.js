@@ -123,9 +123,9 @@ function addList(...args) {
     return sum
 }
 
-console.log(addList(1)) //=> 1
-console.log(addList(1,50,1.23)) //=> 52.23
-console.log(addList(7,-12)) //=> -5
+// console.log(addList(1)) //=> 1
+// console.log(addList(1,50,1.23)) //=> 52.23
+// console.log(addList(7,-12)) //=> -5
 
 
 
@@ -148,10 +148,16 @@ computeRemainder(4,0) //=> Infinity
 computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
+function computeRemainder(num1, num2) {
+    if(num2 === 0) {
+        return Infinity
+    }
+    return num1 % num2
+}
 
-
-
-
+// console.log(computeRemainder(10,2)) //=> 0
+// console.log(computeRemainder(4,0)) //=> Infinity
+// console.log(computeRemainder(10.5, 3)) //=> 1.5
 
 /*-----------------------------------------------------------------
 Challenge: 06-range
