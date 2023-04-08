@@ -206,10 +206,17 @@ Examples:
 reverseUpcaseString("SEI Rocks!"); //=> "!SKCOR IES" 
 -----------------------------------------------------------------*/
 // Your solution for 07-reverseUpcaseString here:
+function reverseUpcaseString(str) {
+    // This chained sequence of methods:
+    // Changes the string to upper case letters
+    // Splits the string into an array composed of the original letters
+    // Reverses the array of individual letters
+    // Joins the array of letters back into a string
+    return str.toUpperCase().split('').reverse().join('')
+}
 
 
-
-
+// console.log(reverseUpcaseString("SEI Rocks!")); //=> "!SKCOR IES" 
 
 /*-----------------------------------------------------------------
 Challenge: 08-removeEnds
