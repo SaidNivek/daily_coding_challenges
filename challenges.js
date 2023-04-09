@@ -246,8 +246,8 @@ function removeEnds(str) {
     return strArr
 }
 
-console.log(removeEnds('SEI Rocks!')); //=> "EI Rocks"
-console.log(removeEnds('a')); //=> "" (empty string)
+// console.log(removeEnds('SEI Rocks!')); //=> "EI Rocks"
+// console.log(removeEnds('a')); //=> "" (empty string)
 
 
 /*-----------------------------------------------------------------
