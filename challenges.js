@@ -230,13 +230,24 @@ Prompt:
 
 Examples:
 
-removeEnds('SEI Rocks!'); //=> "DI Rocks"
+removeEnds('SEI Rocks!'); //=> "EI Rocks"
 removeEnds('a'); //=> "" (empty string)
 -----------------------------------------------------------------*/
 // Your solution for 08-removeEnds here:
+function removeEnds(str) {
+    if(str.length < 3) {
+        return ''
+    }
+    let strArr =  str.split('')
+    strArr.pop()
+    strArr.shift()
+    strArr.join('')
+    
+    return strArr
+}
 
-
-
+console.log(removeEnds('SEI Rocks!')); //=> "EI Rocks"
+console.log(removeEnds('a')); //=> "" (empty string)
 
 
 /*-----------------------------------------------------------------
