@@ -402,14 +402,14 @@ function hammingDistance(str1, str2) {
             differences++
         }
     }
-    
+
     return differences
 }
 
-console.log(hammingDistance('abc', 'abc')); //=> 0
-console.log(hammingDistance('a1c', 'a2c')); //=> 1
-console.log(hammingDistance('!!!!', '****')); //=> 4
-console.log(hammingDistance('abc', 'ab')); //=> NaN
+// console.log(hammingDistance('abc', 'abc')); //=> 0
+// console.log(hammingDistance('a1c', 'a2c')); //=> 1
+// console.log(hammingDistance('!!!!', '****')); //=> 4
+// console.log(hammingDistance('abc', 'ab')); //=> NaN
 
 
 /*-----------------------------------------------------------------
