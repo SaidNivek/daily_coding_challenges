@@ -390,9 +390,26 @@ hammingDistance('!!!!', '****'); //=> 4
 hammingDistance('abc', 'ab'); //=> NaN
 -----------------------------------------------------------------*/
 // Your solution for 12-hammingDistance here:
+function hammingDistance(str1, str2) {
+    // Set a variable to hold the number of differences between the strings
+    let differences = 0
+    // If the strings are different lengths, return NaN
+    if(str1.length !== str2.length) { return NaN }
+    // If strings are the same length, compare each char at the same position
+    // If different chars at that position, increment differences, otherwise do nothing
+    for (let i = 0; i < str1.length; i++) {
+        if (str1[i] !== str2[i]) {
+            differences++
+        }
+    }
+    
+    return differences
+}
 
-
-
+console.log(hammingDistance('abc', 'abc')); //=> 0
+console.log(hammingDistance('a1c', 'a2c')); //=> 1
+console.log(hammingDistance('!!!!', '****')); //=> 4
+console.log(hammingDistance('abc', 'ab')); //=> NaN
 
 
 /*-----------------------------------------------------------------
