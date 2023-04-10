@@ -301,9 +301,22 @@ formatWithPadding(42, '*', 10); //=> "********42"
 formatWithPadding(1234, '*', 3); //=> "1234"
 -----------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
+function formatWithPadding(num1, char, num2) {
+    let paddedString = num1.toString()
+    if(paddedString.length >= num2) {
+        return paddedString
+    }
+    paddedString = paddedString.split('')
+    while (paddedString.length < num2) {
+        paddedString.unshift(char)
+    }
+    paddedString =  paddedString.join('')
+    return paddedString
+}
 
-
-
+console.log(formatWithPadding(123, '0', 5)); //=> "00123"
+console.log(formatWithPadding(42, '*', 10)); //=> "********42"
+console.log(formatWithPadding(1234, '*', 3)); //=> "1234"
 
 
 /*-----------------------------------------------------------------
