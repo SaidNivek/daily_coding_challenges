@@ -339,10 +339,35 @@ isPalindrome('A nut for a jar of tuna'); //=> true
 isPalindrome(''); //=> true
 -----------------------------------------------------------------*/
 // Your solution for 11-isPalindrome here:
+function isPalindrome(str) {
+    if(str.length < 2) {
+        return true
+    } 
+    // Set string to lowercase to compare the correct ASCII values (upper and lower case letters are different values and will not compare to each other as expected)
+    str = str.toLowerCase()
+    // Remove spaces from the string by splitting on the " " and then rejoin the whole string together to ensure that the correct characters are being compared
+    str = str.split(' ').join('')
+        // Declare two variables used to iterate over the left- and right-most characters in the string
+        let left = 0
+        let right = str.length - 1
+    // Compare the characters in each location of the string
+    // Increment and decrement the values held within in order to check the next character
+    while(left < right) {
+        if (str[left] !== str[right]){
+            return false
+        }
+        left++
+        right--
+    }
+
+    return true
+}
 
 
-
-
+console.log(isPalindrome('SEI Rocks')); //=> false
+console.log(isPalindrome('rotor')); //=> true
+console.log(isPalindrome('A nut for a jar of tuna')); //=> true
+console.log(isPalindrome('')); //=> true
 
 /*-----------------------------------------------------------------
 Challenge: 12-hammingDistance
