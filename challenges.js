@@ -314,9 +314,9 @@ function formatWithPadding(num1, char, num2) {
     return paddedString
 }
 
-console.log(formatWithPadding(123, '0', 5)); //=> "00123"
-console.log(formatWithPadding(42, '*', 10)); //=> "********42"
-console.log(formatWithPadding(1234, '*', 3)); //=> "1234"
+// console.log(formatWithPadding(123, '0', 5)); //=> "00123"
+// console.log(formatWithPadding(42, '*', 10)); //=> "********42"
+// console.log(formatWithPadding(1234, '*', 3)); //=> "1234"
 
 
 /*-----------------------------------------------------------------
