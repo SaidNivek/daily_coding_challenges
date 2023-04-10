@@ -364,10 +364,10 @@ function isPalindrome(str) {
 }
 
 
-console.log(isPalindrome('SEI Rocks')); //=> false
-console.log(isPalindrome('rotor')); //=> true
-console.log(isPalindrome('A nut for a jar of tuna')); //=> true
-console.log(isPalindrome('')); //=> true
+// console.log(isPalindrome('SEI Rocks')); //=> false
+// console.log(isPalindrome('rotor')); //=> true
+// console.log(isPalindrome('A nut for a jar of tuna')); //=> true
+// console.log(isPalindrome('')); //=> true
 
 /*-----------------------------------------------------------------
 Challenge: 12-hammingDistance
