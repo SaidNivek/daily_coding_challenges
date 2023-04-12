@@ -478,8 +478,8 @@ function fromPairs(arr) {
 }
 
 
-console.log(fromPairs([ ['a', 1], ['b', 2], ['c', 3] ])) //=> { a: 1, b: 2, c: 3 }
-console.log(fromPairs([ ['name', 'Sam'], ['age', 24], ['name', 'Sally'] ])) // => { name: "Sally", age: 24 }
+// console.log(fromPairs([ ['a', 1], ['b', 2], ['c', 3] ])) //=> { a: 1, b: 2, c: 3 }
+// console.log(fromPairs([ ['name', 'Sam'], ['age', 24], ['name', 'Sally'] ])) // => { name: "Sally", age: 24 }
 
 /*-----------------------------------------------------------------
 Challenge: 15-mergeObjects
