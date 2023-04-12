@@ -431,8 +431,25 @@ mumble('121'); //=> '1-22-111'
 mumble('!A 2'); //=> '!-AA-   -2222'
 -----------------------------------------------------------------*/
 // Your solution for 13-mumble here:
+function mumble(str) {
+    let strArr = str.split('')
+    let results = ''
+    for(let i = 0; i < strArr.length; i++) {
+        for(let j = 0; j < i + 1; j++) {
+            results += strArr[i]
+        }
+        if(strArr.length > 2) {
+            results += '-'
+        }
+    }
+    
+    return results
+}
 
-
+console.log(mumble('X')); //=> 'X'
+console.log(mumble('abc')); //=> 'a-bb-ccc'
+console.log(mumble('121')); //=> '1-22-111'
+console.log(mumble('!A 2')); //=> '!-AA-   -2222'
 
 
 
