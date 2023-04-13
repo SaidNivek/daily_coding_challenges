@@ -558,21 +558,21 @@ function findHighestPriced(arr) {
     return arr[highestIdx]
 }
 
-console.log(findHighestPriced([
-  { sku: 'a1', price: 25 },
-  { sku: 'b2', price: 5 },
-  { sku: 'c3', price: 50 },
-  { sku: 'd4', price: 10 }
-]));
-//=> { sku: 'c3', price: 50 } 
+// console.log(findHighestPriced([
+//   { sku: 'a1', price: 25 },
+//   { sku: 'b2', price: 5 },
+//   { sku: 'c3', price: 50 },
+//   { sku: 'd4', price: 10 }
+// ]));
+// //=> { sku: 'c3', price: 50 } 
 
-console.log(findHighestPriced([
-  { sku: 'a1', price: 25 },
-  { sku: 'b2', price: 50 },
-  { sku: 'c3', price: 50 },
-  { sku: 'd4', price: 10 }
-]));
-//=> { sku: 'b2', price: 50 }
+// console.log(findHighestPriced([
+//   { sku: 'a1', price: 25 },
+//   { sku: 'b2', price: 50 },
+//   { sku: 'c3', price: 50 },
+//   { sku: 'd4', price: 10 }
+// ]));
+// //=> { sku: 'b2', price: 50 }
 
 
 /*-----------------------------------------------------------------
