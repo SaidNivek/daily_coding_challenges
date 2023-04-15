@@ -601,9 +601,23 @@ mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
 //=> ["1 - rose", "2 - tulip", "3 - daisy"]
 -----------------------------------------------------------------*/
 // Your solution for 17-mapArray here:
+function mapArray(arr, cbf) {
+    let newArr = []
+    arr.forEach((el, idx) => {
+        newArr.push(cbf(el, idx))
+    })
+    return newArr
+}
 
+console.log(mapArray( [1, 2, 3], function(n) {
+  return n * 2;
+} ));
+//=> [2, 4, 6]  (a new array)
 
-
+console.log(mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
+  return `${i + 1} - ${f}`;
+} ));
+//=> ["1 - rose", "2 - tulip", "3 - daisy"]
 
 
 /*-----------------------------------------------------------------
