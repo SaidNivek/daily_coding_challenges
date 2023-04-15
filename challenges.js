@@ -609,15 +609,15 @@ function mapArray(arr, cbf) {
     return newArr
 }
 
-console.log(mapArray( [1, 2, 3], function(n) {
-  return n * 2;
-} ));
-//=> [2, 4, 6]  (a new array)
+// console.log(mapArray( [1, 2, 3], function(n) {
+//   return n * 2;
+// } ));
+// //=> [2, 4, 6]  (a new array)
 
-console.log(mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
-  return `${i + 1} - ${f}`;
-} ));
-//=> ["1 - rose", "2 - tulip", "3 - daisy"]
+// console.log(mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
+//   return `${i + 1} - ${f}`;
+// } ));
+// //=> ["1 - rose", "2 - tulip", "3 - daisy"]
 
 
 /*-----------------------------------------------------------------
