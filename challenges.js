@@ -654,7 +654,15 @@ reduceArray( ['Yes', 'No', 'Yes', 'Maybe'], function(acc, v) {
 -----------------------------------------------------------------*/
 // Your solution for 18-reduceArray here:
 function reduceArray(arr, cbf, acc) {
-
+    let sum
+    arr.forEach((element, idx) => {
+        if(idx === 0) {
+            sum = cbf(acc, element, idx)
+        } else {
+            sum = cbf(sum, element, idx)
+        }
+    })
+    return sum
 }
 
 
