@@ -653,10 +653,26 @@ reduceArray( ['Yes', 'No', 'Yes', 'Maybe'], function(acc, v) {
 //=> {"Yes": 2, "No": 1, "Maybe": 1}
 -----------------------------------------------------------------*/
 // Your solution for 18-reduceArray here:
+function reduceArray(arr, cbf, acc) {
+
+}
 
 
-
-
+console.log(reduceArray( [1, 2, 3], function(acc, n) {
+    return acc + n;
+  }, 0));
+  //=> 6
+  
+  console.log(reduceArray( [1, 2, 3], function(acc, n, i) {
+    return acc + n + i;
+  }, 0));
+  //=> 9
+  
+  console.log(reduceArray( ['Yes', 'No', 'Yes', 'Maybe'], function(acc, v) {
+    acc[v] = acc[v] ? acc[v] + 1 : 1;
+    return acc;
+  }, {} ));
+  //=> {"Yes": 2, "No": 1, "Maybe": 1}
 
 /*-----------------------------------------------------------------
 Challenge: 19-flatten
