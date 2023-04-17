@@ -708,9 +708,25 @@ flatten( [1, [2, [3, [4]]], 1, 'a', ['b', 'c']] );
 //=> [1, 2, 3, 4, 1, 'a', 'b', 'c']
 -----------------------------------------------------------------*/
 // Your solution for 19-flatten here:
+function flatten(arr) {
+    let newArr = []
+    arr.forEach(elem => {
+        if(Array.isArray(elem)) {
+            newArr = newArr.concat(flatten(elem))
+        } else {
+            newArr.push(elem)
+        }
+    })
+    
 
+    return newArr
+}
 
+console.log(flatten( [1, [2, 3]] ));
+//=> [1, 2, 3]  (a new array) 
 
+console.log(flatten( [1, [2, [3, [4]]], 1, 'a', ['b', 'c']] ));
+//=> [1, 2, 3, 4, 1, 'a', 'b', 'c']
 
 
 /*-----------------------------------------------------------------
