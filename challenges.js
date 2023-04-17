@@ -722,11 +722,11 @@ function flatten(arr) {
     return newArr
 }
 
-console.log(flatten( [1, [2, 3]] ));
-//=> [1, 2, 3]  (a new array) 
+// console.log(flatten( [1, [2, 3]] ));
+// //=> [1, 2, 3]  (a new array) 
 
-console.log(flatten( [1, [2, [3, [4]]], 1, 'a', ['b', 'c']] ));
-//=> [1, 2, 3, 4, 1, 'a', 'b', 'c']
+// console.log(flatten( [1, [2, [3, [4]]], 1, 'a', ['b', 'c']] ));
+// //=> [1, 2, 3, 4, 1, 'a', 'b', 'c']
 
 
 /*-----------------------------------------------------------------
