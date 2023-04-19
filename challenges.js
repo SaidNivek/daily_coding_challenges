@@ -748,10 +748,19 @@ isPrime(29) //=> true
 isPrime(200) //=> false
 -----------------------------------------------------------------*/
 // Your solution for 20-isPrime here:
+function isPrime(num) {
+    for(let i = 2; i < num / 2 + 1; i++) {
+        if(num % i === 0) return false
+    }
+    return true
+}
 
 
-
-
+console.log(isPrime(2)) //=> true
+console.log(isPrime(3)) //=> true 
+console.log(isPrime(4)) //=> false
+console.log(isPrime(29)) //=> true
+console.log(isPrime(200)) //=> false
 
 /*-----------------------------------------------------------------
 Challenge: 21-primeFactors
