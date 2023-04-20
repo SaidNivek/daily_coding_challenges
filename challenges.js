@@ -748,12 +748,13 @@ isPrime(29) //=> true
 isPrime(200) //=> false
 -----------------------------------------------------------------*/
 // Your solution for 20-isPrime here:
-function isPrime(num) {
-    for(let i = 2; i < num / 2 + 1; i++) {
-        if(num % i === 0) return false
+function isPrime(n) {
+    if (n < 2 || !Number.isInteger(n)) return false;
+    for (var i = 2; i <= n / 2; i++) {
+      if (Number.isInteger(n / i)) return false;
     }
-    return true
-}
+    return true;
+  }
 
 
 // console.log(isPrime(2)) //=> true
@@ -785,9 +786,51 @@ primeFactors(105) //=> [3, 5, 7]
 primeFactors(200) //=> [2, 2, 2, 5, 5]
 -----------------------------------------------------------------*/
 // Your solution for 21-primeFactors here:
+function primeFactors(num) {
+    // Start an array for our answers
+    let answers = []
+    // If num is less than 2 or not an integer, return the empty array
+    if(num < 2 || !Number.isInteger(num)) {
+        return answers
+    }
+    // isPrime function to check for prime numbers
+    function isPrime(n) {
+        if (n < 2 || !Number.isInteger(n)) return false;
+        for (var i = 2; i <= n / 2; i++) {
+          if (Number.isInteger(n / i)) return false;
+        }
+        return true;
+      }
+      // Starting with the smallest prime of 2
+    let prime = 2
+    // Use the prime function to assist with chcking for primes by looking if the num is NOT prime
+    while(!isPrime(num)) {
+        // If the num divided by the prime number is a whole number, it divides evenly by the prime, then push that prime number into the answers array
+        if(Number.isInteger(num / prime)) {
+            answers.push(prime)
+            // Set the number to the number divided py the prime, since that will be our next tsrating point
+            // Logically, this is because we start from the smallest prime and when we hit the first prime that can go into the num evenly, that is the next place w eneed to start checking for more prime numbers
+            // Also will help us to end the function when the check in the outer while loop fails, when the num gets set to less than 2 or is not an integer
+            num = num / prime
+        } else {
+            // If not prime, keep iterating prime up and checking if it's prime, otherwise we exit the loop
+            prime++
+            while(!isPrime(prime)) {
+                prime++
+            }
+        }
+    }
+    answers.push(num)
+    return answers
+}
 
-
-
+console.log(primeFactors(2)) //=> [2]
+console.log(primeFactors(3)) //=> [3]
+console.log(primeFactors(4)) //=> [2, 2]
+console.log(primeFactors(18)) //=> [2, 3, 3]
+console.log(primeFactors(29)) //=> [29]
+console.log(primeFactors(105)) //=> [3, 5, 7]
+console.log(primeFactors(200)) //=> [2, 2, 2, 5, 5]
 
 
 /*-----------------------------------------------------------------
