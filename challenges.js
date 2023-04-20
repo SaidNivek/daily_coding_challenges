@@ -824,13 +824,13 @@ function primeFactors(num) {
     return answers
 }
 
-console.log(primeFactors(2)) //=> [2]
-console.log(primeFactors(3)) //=> [3]
-console.log(primeFactors(4)) //=> [2, 2]
-console.log(primeFactors(18)) //=> [2, 3, 3]
-console.log(primeFactors(29)) //=> [29]
-console.log(primeFactors(105)) //=> [3, 5, 7]
-console.log(primeFactors(200)) //=> [2, 2, 2, 5, 5]
+// console.log(primeFactors(2)) //=> [2]
+// console.log(primeFactors(3)) //=> [3]
+// console.log(primeFactors(4)) //=> [2, 2]
+// console.log(primeFactors(18)) //=> [2, 3, 3]
+// console.log(primeFactors(29)) //=> [29]
+// console.log(primeFactors(105)) //=> [3, 5, 7]
+// console.log(primeFactors(200)) //=> [2, 2, 2, 5, 5]
 
 
 /*-----------------------------------------------------------------
