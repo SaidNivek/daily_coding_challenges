@@ -866,9 +866,9 @@ function intersection(arr1, arr2) {
     return commonElements
 }
 
-console.log(intersection(['a', 1], [])) //=> []
-console.log(intersection(['a', 1], [true, 'a', 15])) //=> ['a']
-console.log(intersection([1, 'a', true, 1, 1], [true, 1, 'b', 1])) //=> [1, true, 1]
+// console.log(intersection(['a', 1], [])) //=> []
+// console.log(intersection(['a', 1], [true, 'a', 15])) //=> ['a']
+// console.log(intersection([1, 'a', true, 1, 1], [true, 1, 'b', 1])) //=> [1, true, 1]
 
 
 /*-----------------------------------------------------------------
