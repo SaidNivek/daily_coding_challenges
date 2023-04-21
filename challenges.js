@@ -853,9 +853,22 @@ intersection(['a', 1], [true, 'a', 15]) //=> ['a']
 intersection([1, 'a', true, 1, 1], [true, 1, 'b', 1]) //=> [1, true, 1]
 -----------------------------------------------------------------*/
 // Your solution for 22-intersection here:
+function intersection(arr1, arr2) {
+    let commonElements = []
+    for(let i = 0; i < arr1.length; i++) {
+        for(let j = 0; j < arr2.length; j++) {
+            if(arr1[i] === arr2[j]) {
+                commonElements.push(arr2.splice(j, 1)[0])
+                break
+            }
+        }
+    }
+    return commonElements
+}
 
-
-
+console.log(intersection(['a', 1], [])) //=> []
+console.log(intersection(['a', 1], [true, 'a', 15])) //=> ['a']
+console.log(intersection([1, 'a', true, 1, 1], [true, 1, 'b', 1])) //=> [1, true, 1]
 
 
 /*-----------------------------------------------------------------
