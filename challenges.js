@@ -853,6 +853,8 @@ intersection(['a', 1], [true, 'a', 15]) //=> ['a']
 intersection([1, 'a', true, 1, 1], [true, 1, 'b', 1]) //=> [1, true, 1]
 -----------------------------------------------------------------*/
 // Your solution for 22-intersection here:
+// Look at solutions for non-double loop.
+
 function intersection(arr1, arr2) {
     let commonElements = []
     for(let i = 0; i < arr1.length; i++) {
@@ -892,9 +894,30 @@ balancedBrackets( '[(])' ) // => false
 balancedBrackets( '[({}[])]' ) // => true
 -----------------------------------------------------------------*/
 // Your solution for 23-balancedBrackets here:
+function balancedBrackets(str) {
+    let open = []
+    for(let i = 0; i < str.length; i++) {
+        if(str[i] === '(' || str[i] === '[' || str[i] === '{') {
+            open.push(str[i])
+        } else {
+            let lastBrace = open.pop()
+            if(lastBrace === '(' && str[i] !== ')' ){
+                return false
+            } else if (lastBrace === '[' && str[i] !== ']') {
+                return false
+            } else if (lastBrace === '{' && str[i] !== '}') {
+                return false
+            }
+        }
+    }
+    return true
+}
 
-
-
+console.log(balancedBrackets( '()' )) // => true
+console.log(balancedBrackets( '(]' )) // => false
+console.log(balancedBrackets( '[{}]' )) // => true
+console.log(balancedBrackets( '[(])' )) // => false
+console.log(balancedBrackets( '[({}[])]' )) // => true
 
 
 /*-----------------------------------------------------------------
