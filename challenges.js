@@ -913,11 +913,11 @@ function balancedBrackets(str) {
     return true
 }
 
-console.log(balancedBrackets( '()' )) // => true
-console.log(balancedBrackets( '(]' )) // => false
-console.log(balancedBrackets( '[{}]' )) // => true
-console.log(balancedBrackets( '[(])' )) // => false
-console.log(balancedBrackets( '[({}[])]' )) // => true
+// console.log(balancedBrackets( '()' )) // => true
+// console.log(balancedBrackets( '(]' )) // => false
+// console.log(balancedBrackets( '[{}]' )) // => true
+// console.log(balancedBrackets( '[(])' )) // => false
+// console.log(balancedBrackets( '[({}[])]' )) // => true
 
 
 /*-----------------------------------------------------------------
