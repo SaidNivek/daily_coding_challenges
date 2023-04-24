@@ -958,10 +958,10 @@ function isWinningTicket(arr) {
     return correct === arr.length ? true : false
 }
 
-console.log(isWinningTicket( [ ['ABC', 65] ] )) // => true
-console.log(isWinningTicket( [ ['ABC', 999], ['XY', 89] ] )) // => false
-console.log(isWinningTicket( [ ['ABC', 66], ['dddd', 100], ['Hello', 108] ] )) // => true
-console.log(isWinningTicket( [ ['ABC', 66], ['dddd', 15], ['Hello', 108] ] )) // => false
+// console.log(isWinningTicket( [ ['ABC', 65] ] )) // => true
+// console.log(isWinningTicket( [ ['ABC', 999], ['XY', 89] ] )) // => false
+// console.log(isWinningTicket( [ ['ABC', 66], ['dddd', 100], ['Hello', 108] ] )) // => true
+// console.log(isWinningTicket( [ ['ABC', 66], ['dddd', 15], ['Hello', 108] ] )) // => false
 
 
 
