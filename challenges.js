@@ -945,8 +945,14 @@ isWinningTicket( [ ['ABC', 66], ['dddd', 100], ['Hello', 108] ] ) // => true
 isWinningTicket( [ ['ABC', 66], ['dddd', 15], ['Hello', 108] ] ) // => false
 -----------------------------------------------------------------*/
 // Your solution for 24-isWinningTicket here:
+function isWinningTicket(arr) {
+    
+}
 
-
+console.log(isWinningTicket( [ ['ABC', 65] ] )) // => true
+console.log(isWinningTicket( [ ['ABC', 999], ['XY', 89] ] )) // => false
+console.log(isWinningTicket( [ ['ABC', 66], ['dddd', 100], ['Hello', 108] ] )) // => true
+console.log(isWinningTicket( [ ['ABC', 66], ['dddd', 15], ['Hello', 108] ] )) // => false
 
 
 
