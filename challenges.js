@@ -946,7 +946,16 @@ isWinningTicket( [ ['ABC', 66], ['dddd', 15], ['Hello', 108] ] ) // => false
 -----------------------------------------------------------------*/
 // Your solution for 24-isWinningTicket here:
 function isWinningTicket(arr) {
-    
+    let correct = 0
+    arr.forEach(element => {
+        for(let i = 0; i < element[0].length; i++) {
+            if(element[0][i] === String.fromCharCode(element[1])) {
+                correct++
+                break
+            }
+        }
+    })
+    return correct === arr.length ? true : false
 }
 
 console.log(isWinningTicket( [ ['ABC', 65] ] )) // => true
