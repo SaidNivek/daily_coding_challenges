@@ -999,10 +999,10 @@ function getNumForIP(str) {
     return total
 }
 
-console.log(getNumForIP( '0.0.0.1' )) // => 1
-console.log(getNumForIP( '0.0.2.0' )) // => 512
-console.log(getNumForIP( '192.156.99.15' )) // => 3231474447
-console.log(getNumForIP( '10.0.0.1' )) // => 167772161
+// console.log(getNumForIP( '0.0.0.1' )) // => 1
+// console.log(getNumForIP( '0.0.2.0' )) // => 512
+// console.log(getNumForIP( '192.156.99.15' )) // => 3231474447
+// console.log(getNumForIP( '10.0.0.1' )) // => 167772161
 
 
 /*-----------------------------------------------------------------
