@@ -1029,6 +1029,21 @@ toCamelCase( 'Mama-mia' ) // => 'MamaMia'
 toCamelCase( 'A_b_c' ) // => 'ABC'
 -----------------------------------------------------------------*/
 // Your solution for 26-toCamelCase here:
+function toCamelCase(str) {
+    let newString = ''
+    let arr = str.split(/[\-_]+/)
+    newString += arr[0]
+    for(let i = 1; i < arr.length; i++) {
+        newString += arr[i].charAt(0).toUpperCase() + arr[i].slice(1)        
+    }
+    return newString
+}
+
+console.log(toCamelCase( 'sei' )) // => 'sei'
+console.log(toCamelCase( 'sei-rocks' )) // => 'seiRocks'
+console.log(toCamelCase( 'banana_Turkey_potato' )) // => 'bananaTurkeyPotato'
+console.log(toCamelCase( 'Mama-mia' )) // => 'MamaMia'
+console.log(toCamelCase( 'A_b_c' )) // => 'ABC'
 
 
 
@@ -1149,4 +1164,3 @@ totalTaskTime( [2, 2, 3, 3, 4, 4], 2 ) //=> 9
 totalTaskTime( [5, 2, 6, 8, 7, 2], 3 ) // => 12
 -----------------------------------------------------------------*/
 // Your solution for 30- here:
-
