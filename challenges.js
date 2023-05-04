@@ -1039,15 +1039,11 @@ function toCamelCase(str) {
     return newString
 }
 
-console.log(toCamelCase( 'sei' )) // => 'sei'
-console.log(toCamelCase( 'sei-rocks' )) // => 'seiRocks'
-console.log(toCamelCase( 'banana_Turkey_potato' )) // => 'bananaTurkeyPotato'
-console.log(toCamelCase( 'Mama-mia' )) // => 'MamaMia'
-console.log(toCamelCase( 'A_b_c' )) // => 'ABC'
-
-
-
-
+// console.log(toCamelCase( 'sei' )) // => 'sei'
+// console.log(toCamelCase( 'sei-rocks' )) // => 'seiRocks'
+// console.log(toCamelCase( 'banana_Turkey_potato' )) // => 'bananaTurkeyPotato'
+// console.log(toCamelCase( 'Mama-mia' )) // => 'MamaMia'
+// console.log(toCamelCase( 'A_b_c' )) // => 'ABC'
 
 /*-----------------------------------------------------------------
 Challenge: 27-countTheBits
