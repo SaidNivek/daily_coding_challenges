@@ -1070,9 +1070,31 @@ countTheBits( 255 ) //=> 8
 countTheBits( 65535 )  //=> 16
 -----------------------------------------------------------------*/
 // Your solution for 27-countTheBits here:
+function countTheBits(int) {
+    let bits = ''
+    let numOnes = 0
+    if (int === 0) bits += '0'
+    while (int > 0) {
+        (int % 2 === 0) ? bits += '0' : bits += '1'
+        int = (int / 2).toString().split('.')[0]
+        if (int === 1) {
+            bits += '1'
+            int = 0
+        }
+    }
+    bits = bits.split('').forEach(num => {
+        if (num === '1') numOnes++
+    })
 
+    return numOnes
 
+}
 
+console.log(countTheBits( 0 )) // => 0
+console.log(countTheBits( 13 )) // => 3
+console.log(countTheBits( 256 )) // => 1
+console.log(countTheBits( 255 )) //=> 8
+console.log(countTheBits( 65535 ))  //=> 16
 
 
 /*-----------------------------------------------------------------
