@@ -1124,10 +1124,13 @@ function gridTrip(arr, str) {
     let pos = [...arr]
     const regex = /[A-Z][0-9]{0,2}/g
     let found = str.match(regex)
-    
+    let direction = []
+    found.forEach(element => {
+        direction.push(element.slice(0, 1))
+    })
        
     
-    return found
+    return direction
 }
 
 console.log(gridTrip( [0, 0], 'U2R1' )) // => [2, 1]
