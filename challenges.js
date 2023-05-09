@@ -1180,8 +1180,20 @@ addChecker( [10, 15, 16, 22], 32 ) // => true
 addChecker( [10, 15, 16, 22], 19 ) // => false
 -----------------------------------------------------------------*/
 // Your solution for 29-addChecker here:
+function addChecker(arr, int) {
+    let left = 0
+    for(let i = 1; i < arr.length; i++) {
+        if (arr[left] + arr[i] > int) return false
+        if (arr[left] + arr[i] === int) return true
+        if (i === arr.length - 1) left++
+    }
+    return false
+}
 
-
+console.log(addChecker( [1, 2], 3 )) // => true
+console.log(addChecker( [-3, 2], 9 )) // => false
+console.log(addChecker( [10, 15, 16, 22], 32 )) // => true
+console.log(addChecker( [10, 15, 16, 22], 19 )) // => false
 
 
 
