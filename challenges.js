@@ -1190,10 +1190,10 @@ function addChecker(arr, int) {
     return false
 }
 
-console.log(addChecker( [1, 2], 3 )) // => true
-console.log(addChecker( [-3, 2], 9 )) // => false
-console.log(addChecker( [10, 15, 16, 22], 32 )) // => true
-console.log(addChecker( [10, 15, 16, 22], 19 )) // => false
+// console.log(addChecker( [1, 2], 3 )) // => true
+// console.log(addChecker( [-3, 2], 9 )) // => false
+// console.log(addChecker( [10, 15, 16, 22], 32 )) // => true
+// console.log(addChecker( [10, 15, 16, 22], 19 )) // => false
 
 
 
