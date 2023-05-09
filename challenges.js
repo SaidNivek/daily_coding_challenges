@@ -1125,12 +1125,30 @@ function gridTrip(arr, str) {
     const regex = /[A-Z][0-9]{0,2}/g
     let found = str.match(regex)
     let direction = []
+    let movement = []
     found.forEach(element => {
         direction.push(element.slice(0, 1))
+        movement.push(element.slice(1, element.length))
     })
-       
-    
-    return direction
+    for (let i = 0; i < direction.length; i++) {
+        switch (direction[i]) {
+            case 'U':
+                pos[0] += Number(movement[i])
+                break;
+            case 'D':
+                pos[0] -= Number(movement[i])
+                break;
+            case 'R':
+                pos[1] += Number(movement[i])
+                break;
+            case 'L':
+                pos[1] -= Number(movement[i])
+                break;
+            default:
+                break;
+        }  
+    }
+    return pos
 }
 
 console.log(gridTrip( [0, 0], 'U2R1' )) // => [2, 1]
