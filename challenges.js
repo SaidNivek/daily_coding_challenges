@@ -1224,8 +1224,21 @@ totalTaskTime( [2, 2, 3, 3, 4, 4], 2 ) //=> 9
 totalTaskTime( [5, 2, 6, 8, 7, 2], 3 ) // => 12
 -----------------------------------------------------------------*/
 // Your solution for 30- here:
-function totalTaskTime() {
-
+function totalTaskTime(queue, threads) {
+    let time = 0
+    let timeTotals = {}
+    if(queue.length === 0) return 0
+    if(threads === 1) {
+        return time = queue.reduce((total, num) => total + num, 0)
+    } else {
+        queue.sort((a,b) => b - a)
+        for(let i = 0; i < threads; i++) {
+            timeTotals[i] = 0
+        }
+        
+        console.log(timeTotals)
+    }
+    return time
 }
 
 console.log(totalTaskTime( [], 1 )) // => 0
