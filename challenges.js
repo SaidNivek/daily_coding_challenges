@@ -1226,17 +1226,32 @@ totalTaskTime( [5, 2, 6, 8, 7, 2], 3 ) // => 12
 // Your solution for 30- here:
 function totalTaskTime(queue, threads) {
     let time = 0
+    let zeroes = 0
+    // Create an object to store the values within each thread and hold the values that each thread previously contained
+    // This will be used to keep track of the current time remaining in each thread and also to track the length of total time in each thread
     let timeTotals = {}
+
     if(queue.length === 0) return 0
     if(threads === 1) {
         return time = queue.reduce((total, num) => total + num, 0)
     } else {
-        queue.sort((a,b) => b - a)
+        // Create parameters for the current value in the threads and arrays for the total number of minutes each thread has been used
         for(let i = 0; i < threads; i++) {
             timeTotals[i] = 0
+            timeTotals[`${i}array`] = []
         }
-        
-        console.log(timeTotals)
+
+        // Set the value of our zero tracker to the current number of zeroes to use in a conditional
+        for(const [key, value] of Object.entries(timeTotals)) {
+            // console.log(value)
+            if(value === 0) {
+                zeroes++
+            }
+        }
+
+
+        // console.log(zeroes) 
+        // console.log(timeTotals)
     }
     return time
 }
