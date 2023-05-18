@@ -1248,7 +1248,9 @@ function totalTaskTime(queue, threads) {
                 zeroes++
             }
         }
-
+        while(queue.length !== 0 && zeroes !== 0) {
+            
+        }
 
         // console.log(zeroes) 
         // console.log(timeTotals)
