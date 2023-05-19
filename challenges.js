@@ -1249,11 +1249,11 @@ function totalTaskTime(queue, threads) {
             }
         }
         while(queue.length !== 0 && zeroes !== 0) {
-            
+
         }
 
-        // console.log(zeroes) 
-        // console.log(timeTotals)
+        console.log(zeroes) 
+        console.log(timeTotals)
     }
     return time
 }
