@@ -1252,8 +1252,8 @@ function totalTaskTime(queue, threads) {
 
         }
 
-        console.log(zeroes) 
-        console.log(timeTotals)
+        // console.log(zeroes) 
+        // console.log(timeTotals)
     }
     return time
 }
