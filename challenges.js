@@ -1224,39 +1224,29 @@ totalTaskTime( [2, 2, 3, 3, 4, 4], 2 ) //=> 9
 totalTaskTime( [5, 2, 6, 8, 7, 2], 3 ) // => 12
 -----------------------------------------------------------------*/
 // Your solution for 30- here:
-function totalTaskTime(queue, threads) {
-    let time = 0
-    let zeroes = 0
-    // Create an object to store the values within each thread and hold the values that each thread previously contained
-    // This will be used to keep track of the current time remaining in each thread and also to track the length of total time in each thread
-    let timeTotals = {}
-
-    if(queue.length === 0) return 0
-    if(threads === 1) {
-        return time = queue.reduce((total, num) => total + num, 0)
-    } else {
-        // Create parameters for the current value in the threads and arrays for the total number of minutes each thread has been used
-        for(let i = 0; i < threads; i++) {
-            timeTotals[i] = 0
-            timeTotals[`${i}array`] = []
-        }
-
-        // Set the value of our zero tracker to the current number of zeroes to use in a conditional
-        for(const [key, value] of Object.entries(timeTotals)) {
-            // console.log(value)
-            if(value === 0) {
-                zeroes++
-            }
-        }
-        while(queue.length !== 0 && zeroes !== 0) {
-
-        }
-
-        // console.log(zeroes) 
-        // console.log(timeTotals)
+function totalTaskTime(tasks, numThreads) {
+    var time = 0
+    let shortest
+    let  threads
+    while(tasks.length > numThreads) {
+      // extract a task for each thread
+      threads = tasks.splice(0, numThreads);
+      // Find out the time for the task that will finish first.
+      // Using the spread operator to provide Math.min with a list of values
+      shortest = Math.min(...threads);
+      // Add the time for that shortest task
+      time += shortest;
+      // Reduce each task in threads by the shortest task time and
+      // remove all of those completed "short" tasks
+      threads = threads.map(t => t - shortest).filter(t => t);
+      // Put any remaining tasks back into threads and do it again (loop)...
+      tasks = threads.concat(tasks);
     }
-    return time
-}
+    // When num remaining tasks is less or equal to numThreads,
+    // we just need to add the time from the longest remaining task.
+    // The ternary protects against Math.max returning infinity on an empty array
+    return time + (tasks.length ? Math.max(...tasks) : 0);
+  }
 
 console.log(totalTaskTime( [], 1 )) // => 0
 console.log(totalTaskTime( [4, 2, 5], 1 )) // => 11

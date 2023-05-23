@@ -1252,7 +1252,9 @@ function sayHello() {
   // Your solution for 30- here:
   
   function totalTaskTime(tasks, numThreads) {
-    var time = 0, shortest, threads;
+    var time = 0
+    let shortest
+    let  threads
     while(tasks.length > numThreads) {
       // extract a task for each thread
       threads = tasks.splice(0, numThreads);
